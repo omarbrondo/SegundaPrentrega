@@ -9,37 +9,37 @@ const app = express();
 const httpServer = createServer(app);
 const io = new Server(httpServer);
 
-// Función para leer productos del archivo
+
 const getProducts = () => {
     const data = fs.readFileSync(path.join(__dirname, 'productos.json'), 'utf-8');
     return JSON.parse(data);
 };
 
-// Configuración de Handlebars
+
 app.engine('handlebars', engine({
-    layoutsDir: false, // Desactiva los layouts
-    defaultLayout: false // Asegúrate de que no haya un layout por defecto
+    layoutsDir: false, 
+    defaultLayout: false 
 }));
 app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));
 
-// Rutas de la API
-app.use('/api/products', require('./routes/products')(io)); // Pasar io aquí
+
+app.use('/api/products', require('./routes/products')(io)); 
 app.use('/api/carts', require('./routes/carts'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Ruta para renderizar las vistas
+
 app.get('/home', (req, res) => {
-    const products = getProducts(); // Leer productos desde el archivo
-    res.render('home', { products }); // Renderiza directamente 'home.handlebars'
+    const products = getProducts(); 
+    res.render('home', { products }); 
 });
 
 app.get('/realtimeproducts', (req, res) => {
-    const products = getProducts(); // Leer productos desde el archivo
-    res.render('realTimeProducts', { products }); // Renderiza directamente 'realTimeProducts.handlebars'
+    const products = getProducts(); 
+    res.render('realTimeProducts', { products }); 
 });
 
-// Socket.io: Configuración básica
+
 io.on('connection', (socket) => {
     console.log('New client connected');
 
