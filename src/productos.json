@@ -1,0 +1,90 @@
+[
+  {
+    "id": "1",
+    "title": "Producto 1",
+    "description": "Descripción del producto 1",
+    "code": "P001",
+    "price": 100,
+    "status": true,
+    "stock": 50,
+    "category": "Categoría 1",
+    "thumbnails": [
+      "url1.jpg",
+      "url2.jpg"
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Producto de Prueba",
+    "description": "Una descripción de prueba",
+    "code": "PTEST001",
+    "price": 100,
+    "status": true,
+    "stock": 10,
+    "category": "Pruebas",
+    "thumbnails": [
+      "url1.jpg",
+      "url2.jpg"
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Nuevo Producto",
+    "description": "Descripción del producto",
+    "code": "12345",
+    "price": 100,
+    "status": true,
+    "stock": 10,
+    "category": "Categoría",
+    "thumbnails": []
+  },
+  {
+    "id": "4",
+    "title": "Atari2600",
+    "description": "Consola de juegos",
+    "code": "12346666",
+    "price": 12200,
+    "status": true,
+    "stock": 10,
+    "category": "Videojuegos",
+    "thumbnails": []
+  },
+  {
+    "id": "5",
+    "title": "Atari2600",
+    "description": "Consola de juegos",
+    "code": "12346666",
+    "price": 12200,
+    "status": true,
+    "stock": 10,
+    "category": "Videojuegos",
+    "thumbnails": []
+  },
+  {
+    "id": "6",
+    "title": "Atari2600",
+    "description": "Consola de juegos",
+    "code": "12346666",
+    "price": 12200,
+    "status": true,
+    "stock": 10,
+    "category": "Videojuegos",
+    "thumbnails": []
+  },
+  {
+    "id": "7",
+    "title": "Atari2600",
+    "description": "Consola de juegos",
+    "code": "12346666",
+    "price": 12200,
+    "status": true,
+    "stock": 10,
+    "category": "Videojuegos",
+    "thumbnails": []
+  },
+  {
+    "id": "8",
+    "title": "colecovision",
+    "price": "2333"
+  }
+]
