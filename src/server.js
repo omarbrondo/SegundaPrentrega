@@ -48,7 +48,8 @@ io.on('connection', (socket) => {
         const newProduct = {
             id: String(products.length + 1),
             title: product.title,
-            price: product.price
+            price: product.price,
+
         };
         products.push(newProduct);
         fs.writeFileSync(path.join(__dirname, 'productos.json'), JSON.stringify(products, null, 2));

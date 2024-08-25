@@ -8,7 +8,20 @@
     <h1>Lista de Productos</h1>
     <ul>
         {{#each products}}
-            <li>{{this.title}} - {{this.price}}</li>
+            <li>
+                <h2>{{this.title}} - ${{this.price}}</h2>
+                <p>{{this.description}}</p>
+                
+                {{#if this.thumbnails.length}}
+                    <div>
+                        {{#each this.thumbnails}}
+                            <img src="{{this}}" alt="{{../title}} thumbnail" style="max-width: 100px; max-height: 100px;">
+                        {{/each}}
+                    </div>
+                {{else}}
+                    <p>No hay imágenes disponibles</p>
+                {{/if}}
+            </li>
         {{/each}}
     </ul>
 </body>

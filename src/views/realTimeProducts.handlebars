@@ -16,6 +16,7 @@
     <form id="product-form">
         <input type="text" id="title" placeholder="Título" required>
         <input type="number" id="price" placeholder="Precio" required>
+        <input type="text" id="link" placeholder="Link de foto" required>
         <button type="submit">Agregar Producto</button>
     </form>
 
@@ -27,11 +28,13 @@
             e.preventDefault();
             const title = document.getElementById('title').value;
             const price = document.getElementById('price').value;
+            const link = document.getElementById('link').value;
 
-            socket.emit('newProduct', { title, price });
+            socket.emit('newProduct', { title, price, link });
 
             document.getElementById('title').value = '';
             document.getElementById('price').value = '';
+            
         });
 
 
