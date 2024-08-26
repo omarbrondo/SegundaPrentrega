@@ -45,6 +45,13 @@ io.on('connection', (socket) => {
 
     socket.on('newProduct', (product) => {
         const products = getProducts();
+
+        const thumbnails = typeof product.thumbnails === 'string'
+        ? product.thumbnails.split(',').map(thumbnail => thumbnail.trim())
+        : Array.isArray(product.thumbnails)
+            ? product.thumbnails
+            : [product.thumbnails];
+
         const newProduct = {
             id: String(products.length + 1),
             title: product.title,
@@ -53,7 +60,7 @@ io.on('connection', (socket) => {
             price: product.price,
             stock: product.stock,
             category: product.category,
-            thumbnails: product.thumbnails
+            thumbnails: thumbnails 
 
         };
         products.push(newProduct);

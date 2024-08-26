@@ -36,7 +36,9 @@
             const price = document.getElementById('price').value;
             const stock = document.getElementById('stock').value;
             const category = document.getElementById('category').value;
-            const thumbnails = document.getElementById('thumbnails').value;
+            //const thumbnails = document.getElementById('thumbnails').value;
+            let thumbnails = document.getElementById('thumbnails').value;
+            thumbnails = thumbnails ? [thumbnails] : [];
 
             socket.emit('newProduct', { title, description, code, price,stock,category, thumbnails });
 

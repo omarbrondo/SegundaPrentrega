@@ -40,12 +40,14 @@
   },
   {
     "id": "4",
-    "title": "sss",
-    "description": "sss",
-    "code": "333",
-    "price": "33",
-    "stock": "33",
-    "category": "33",
-    "thumbnails": "33"
+    "title": "Sega Nomad",
+    "description": "Sega portatil",
+    "code": "NOM232",
+    "price": "3500",
+    "stock": "3",
+    "category": "Consolas Hogareñas",
+    "thumbnails": [
+      "https://www.cnet.com/a/img/resize/3ceb07e446fa0fb645a308c8df6eb08a76bb110c/hub/2013/03/29/9b7e4e11-f0e0-11e2-8c7c-d4ae52e62bcc/retro-sega-video-games-0731.jpg?auto=webp&width=1200"
+    ]
   }
 ]
