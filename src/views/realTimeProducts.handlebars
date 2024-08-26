@@ -15,8 +15,12 @@
 
     <form id="product-form">
         <input type="text" id="title" placeholder="Título" required>
+        <input type="text" id="description" placeholder="Descripcion" required>
+        <input type="text" id="code" placeholder="Codigo" required>
         <input type="number" id="price" placeholder="Precio" required>
-        <input type="text" id="link" placeholder="Link de foto" required>
+        <input type="number" id="stock" placeholder="Stock" requiredrequired>
+        <input type="text" id="category" placeholder="Categoria" required>
+        <input type="text" id="thumbnails" placeholder="Link Imagen" >
         <button type="submit">Agregar Producto</button>
     </form>
 
@@ -27,13 +31,22 @@
         document.getElementById('product-form').addEventListener('submit', function(e) {
             e.preventDefault();
             const title = document.getElementById('title').value;
+            const description = document.getElementById('description').value;
+            const code = document.getElementById('code').value;
             const price = document.getElementById('price').value;
-            const link = document.getElementById('link').value;
+            const stock = document.getElementById('stock').value;
+            const category = document.getElementById('category').value;
+            const thumbnails = document.getElementById('thumbnails').value;
 
-            socket.emit('newProduct', { title, price, link });
+            socket.emit('newProduct', { title, description, code, price,stock,category, thumbnails });
 
             document.getElementById('title').value = '';
+            document.getElementById('description').value = '';
+            document.getElementById('code').value = '';
             document.getElementById('price').value = '';
+            document.getElementById('stock').value = '';
+            document.getElementById('category').value = '';
+            document.getElementById('thumbnails').value = '';
             
         });
 
@@ -41,7 +54,7 @@
         socket.on('productUpdated', (product) => {
             const productList = document.getElementById('product-list');
             const newProduct = document.createElement('li');
-            newProduct.textContent = `${product.title} - ${product.price}`;
+            newProduct.textContent = `${product.title} - ${product.description}- ${product.code}- ${product.price} - ${product.stock}- ${product.category}- ${product.thumbnails}`;
             productList.appendChild(newProduct);
         });
 

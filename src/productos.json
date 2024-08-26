@@ -41,6 +41,11 @@
   {
     "id": "4",
     "title": "sss",
-    "price": "222"
+    "description": "sss",
+    "code": "333",
+    "price": "33",
+    "stock": "33",
+    "category": "33",
+    "thumbnails": "33"
   }
 ]

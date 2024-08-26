@@ -48,7 +48,12 @@ io.on('connection', (socket) => {
         const newProduct = {
             id: String(products.length + 1),
             title: product.title,
+            description: product.description,
+            code: product.code,
             price: product.price,
+            stock: product.stock,
+            category: product.category,
+            thumbnails: product.thumbnails
 
         };
         products.push(newProduct);

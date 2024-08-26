@@ -32,7 +32,7 @@ module.exports = (io) => {
         const products = getProducts();
         const product = products.find(p => p.id === req.params.pid);
         if (!product) {
-            return res.status(404).json({ error: 'Product not found' });
+            return res.status(404).json({ error: 'Product no encontrado' });
         }
         res.json(product);
     });
